@@ -1,0 +1,36 @@
+<div>
+    <h2>Employee profile</h2>
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>dob</td>
+                <td>{{profile.dob}}</td>
+            </tr>
+            <tr>
+                <td>department</td>
+                <td>{{profile.department}}</td>
+            </tr>
+            <tr>
+                <td>role</td>
+                <td>{{profile.role}}</td>
+            </tr>
+            <tr>
+                <td>address</td>
+                <td>{{profile.address}}</td>
+            </tr>
+            <tr>
+                <td>zipCode</td>
+                <td>{{profile.zipCode}}</td>
+            </tr>
+            <tr>
+                <td>empId</td>
+                <td>{{profile.empId}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <button class="btn btn-danger" (click)="back()"> Back </button>
+    <button class="btn btn-success"  [routerLink]="['/viewinsurance', profile.empId]" style="margin: 10px;" >View Insurance</button>
+    <button class="btn btn-success"  [routerLink]="['/addinsurance', profile.empId]" style="margin: 10px;" >Add Insurance</button>
+
+</div>

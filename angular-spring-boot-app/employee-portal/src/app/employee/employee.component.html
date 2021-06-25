@@ -1,0 +1,24 @@
+<div class="col-md-6">
+    <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Salary</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td><a style="color: black;" [routerLink]="['/viewemployeeprofile',employee.empId]" routerLinkActive="active">{{employee.name | titlecase }}</a></td>
+            <td>{{employee.designation}}</td>
+            <td>{{employee.salary}}</td>
+            <!-- <td><button class="btn btn-danger" (click)="deleteEmployee(employee)"> Delete Employee</button></td>
+             -->
+             <td><mat-icon (click)="addEmployee(employee)" matTooltip="Add Employee Profile">add</mat-icon></td>
+            <td><mat-icon (click)="deleteEmployee(employee)" matTooltip="Delete Employee">delete</mat-icon></td>
+            
+        </tr>
+    </tbody>
+      </table>
+  
+    </div>

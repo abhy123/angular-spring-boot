@@ -1,0 +1,58 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Insurance Name</mat-label>
+        <input matInput type="text" matNativeControl [(ngModel)]="insurance.name" placeholder="Insurance Name" name="name">
+    </mat-form-field>
+    <!-- <mat-form-field>
+      <mat-label>Insurance Company : </mat-label>
+      <input type="text" placeholder="Insurance Company" matNativeControl [(ngModel)]="insurance.company" name="company"
+      [matAutoComplete]="auto">
+      <matAutoComplete autoActiveFirstOption #auto="matAutocomplete"></matAutoComplete>>
+      <mat-option *ngFor = "let company of insurance.company" [value] = "insurance.company">{{company}}</mat-option>
+    </mat-form-field> -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Insurance Type</mat-label>
+      <mat-select matNativeControl [(ngModel)]="insurance.type" name="type">
+        <mat-option value="PRIMARY"  name="type">PRIMARY</mat-option>
+        <mat-option value="SECONDARY" name="type">SECONDARY</mat-option>
+        <mat-option value="TERTIARY" name="type">TERTIARY</mat-option>
+      </mat-select>
+  </mat-form-field>
+  <mat-checkbox class="example-full-width" matNativeControl [(ngModel)]="insurance.isClaimLastYear" name="claimLastYear"> Claim in Last Year ?</mat-checkbox>
+  <br><br>
+  <mat-form-field class="example-full-width">
+    <mat-label  class="example-full-width"> Insurance Family Cover details : </mat-label>
+    <mat-select  class="example-full-width" matNativeControl [(ngModel)]="insurance.familyCover" name="familyCover" multiple>
+      
+      <mat-option  *ngFor="let cover of insurance.familyCover" value="value" name="cover.value">
+      {{cover.key}}
+      </mat-option>
+    </mat-select>
+</mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Insurance Term</mat-label>
+    <input matInput type="number" matNativeControl [(ngModel)]="insurance.insuranceTerm" placeholder="0" name="insuranceTerm">
+</mat-form-field>
+<mat-form-field class="example-full-width">
+  <mat-label>Previous diseases</mat-label>
+  <textarea matInput matNativeControl [(ngModel)]="insurance.previousDiseases"
+  cdkTextareaAutosize
+  #autosize="cdkTextareaAutosize"
+  cdkAutosizeMinRows="1"
+  cdkAutosizeMaxRows="5"
+  name="previousDiseases">
+</textarea>
+</mat-form-field>
+<button class="btn btn-success" (click)="addInsurance()">{{insurance.name ? 'Update' : 'Add'}}</button>
+<button class="btn btn-danger"  [routerLink]="['/viewemployeeprofile',id]" style="margin: 10px;" >Back</button>
+  
+
+</form>
+<!--public name: string, 
+    public company: string,
+      public type: string,
+      public isClaimLastYear: boolean,
+      public familyCover: object,
+      public insuranceTerm: number,
+      public previousDiseases: string,
+      public cardImage: string -->

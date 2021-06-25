@@ -1,0 +1,11 @@
+.prov-title{
+    padding: 10px;
+    margin: 10px;
+}
+
+li{
+    float: left;
+    list-style-type: none;
+    display: flex;
+
+}

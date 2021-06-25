@@ -1,0 +1,60 @@
+.headercss{
+    display: flex;
+    background-color: #FFBF00;
+    color: black;
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+.a0{
+    margin: 4px;
+    padding: 5px;
+    font-size: 28px;
+    position: inline;
+}
+.a01{
+    margin: 0px;
+    padding: 0px;
+    font-size: 25px;
+}
+
+.a2{
+    color: black;
+    font-size: 24px;
+    margin: 8px;;
+    padding: 8px;
+    float: left;
+}
+
+.a1{
+    color: black;
+    padding-left: 0;
+    margin-left: 0;
+    list-style-type: none;
+    float: right;
+
+}
+
+.a1 > li {
+    color: black;
+    margin: 8px;;
+    margin-right:10px;
+    text-align: right;
+    margin-bottom:0px;
+    padding: 8px;
+    display: inline;
+    float: right;
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+.a1 > li > a {
+color: black;
+}
+
+.a1 > li > .a3 {
+    color: white;
+    background-color: black;
+    padding: 7px 16px 9px;
+    box-sizing: border-box;
+    border-width: 1px;
+}

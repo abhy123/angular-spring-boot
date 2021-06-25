@@ -1,0 +1,34 @@
+<div class="col-md-6">
+    <h2 class="text-center">Add Employee Profile</h2>
+    <form>
+      <div class="form-group">
+        <label for="dob">Dob:</label>
+        <input [(ngModel)]="profile.dob" placeholder="dob" name="dob" class="form-control" id="dob">
+      </div>
+    
+      <div class="form-group">
+        <label for="department">Department:</label>
+        <input [(ngModel)]="profile.department" placeholder="department" name="department" class="form-control" id="department">
+      </div>
+    
+      <div class="form-group">
+        <label for="role">Role</label>
+        <input [(ngModel)]="profile.role" placeholder="Role" name="role" class="form-control" id="role">
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input [(ngModel)]="profile.address" placeholder="address" name="address" class="form-control" id="address">
+      </div>
+
+      <div class="form-group">
+        <label for="zipCode">Zip</label>
+        <input [(ngModel)]="profile.zipCode" placeholder="zip" name="zipCode" class="form-control" id="zipCode">
+      </div>
+    
+      <button class="btn btn-success" (click)="addEmployeeProfile()">{{profile.department ? 'Update' : 'Add'}}</button>
+      <button class="btn btn-danger"  routerLink="/" style="margin: 10px;" >Back</button>
+
+    </form>
+    </div>
+    
